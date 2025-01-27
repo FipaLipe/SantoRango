@@ -22,7 +22,7 @@ export default async function Home() {
     <div className="flex flex-col justify-center items-center p-4">
       <h1 className="text-3xl font-bold">🍕 Santo Rango</h1>
       <div className="flex flex-row gap-4 m-6 w-fit">
-        {data.map((p: Person) => (
+        {data!.map((p: Person) => (
           <div key={p.name}>
             <PersonCard name={p.name} img={getPublicUrl(p.name)} />
           </div>
