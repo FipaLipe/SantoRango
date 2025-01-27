@@ -13,11 +13,7 @@ export default async function Home() {
   const { data } = await supabase.from('people').select();
 
   function getPublicUrl(name: string) {
-    const { data, error } = supabase.storage.from('images').getPublicUrl('/' + name);
-
-    if (error) {
-      console.log(error.message)
-    }
+    const { data } = supabase.storage.from('images').getPublicUrl('/' + name);
 
     return data.publicUrl;
   }
