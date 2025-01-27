@@ -2,7 +2,6 @@
 
 import { createClient } from "@/utils/supabase/client";
 import { MinusCircle, PlusCircle } from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 type PersonProps = {
@@ -37,7 +36,7 @@ export default function PersonCard({ name, img }: PersonProps) {
 
     return (
         <div className="w-40 h-40 bg-zinc-600 rounded-md person-card flex">
-            <Image className="person-img" src={img} alt={name} />
+            <img className="person-img" src={img} />
             <div className="person-content w-full h-full p-2 flex flex-row justify-between items-center">
                 <button><MinusCircle onClick={handleMinus} /></button>
                 <h1 className="flex align-center justify-content-center h-fit text-4xl">{qtd}</h1>

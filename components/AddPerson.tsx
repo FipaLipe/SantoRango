@@ -2,7 +2,6 @@
 
 import { createClient } from "@/utils/supabase/client";
 import { Plus } from "lucide-react";
-import Image from "next/image";
 import { useState } from "react"
 
 export default function AddPerson() {
@@ -101,7 +100,7 @@ export default function AddPerson() {
                             />
                             {preview && (
                                 <div className="mt-2">
-                                    <Image src={preview} alt="Pré-visualização" className="max-w-full h-32 object-cover rounded" />
+                                    <img src={preview} alt="Pré-visualização" className="max-w-full h-32 object-cover rounded" />
                                 </div>
                             )}
                         </div>
